@@ -1,0 +1,77 @@
+body {
+  color: #0E3D51;
+}
+
+.background {
+  background: #DAF4FF;
+  border-radius: 20px;
+}
+
+.container {
+  padding: 20px;
+  margin: auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  text-align: center;
+}
+
+.fields-container {
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input{
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0px;
+}
+
+input[placeholder="Message"] {
+  width: 330px;
+}
+
+.add-tweet-button {
+  background-color: #4A8DF1;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.tweets-container {
+  padding: 30px;
+}
+
+.tweets-table {
+  background: white;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+}
+
+td, th {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover{
+  background: #DAF4FF;
+}
+
+tbody{
+  font-size: 14px;
+}
+
+h1 {
+  padding: 20px;
+  margin: 0px;
+}

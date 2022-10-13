@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kwabena - Poor Man's Twitter</title>
+  <link rel="stylesheet" href="{% static 'twitter/css/style.css' %}">
+</head>
+
+<body>
+  <div id="app">
+
+    <div class="container">
+
+        <div class="header background">
+          <h1>Poor Man's Twitter</h1>
+        </div>
+
+        <div class="form-container background">
+          <form class="tweet-form" @submit.prevent="addTweet">
+            <div class="fields-container">
+              <input type="text" v-model="tweet.message" placeholder="Message">
+              <input type="text" v-model="tweet.name" placeholder="Name">
+              <input class="add-tweet-button" type="submit" value="Add tweet">
+            </div>
+          </form>
+        </div>
+
+        <div class="tweets-container background">
+          <table class="tweets-table">
+            <thead>
+              <th>Message</th>
+              <th>Name</th>
+              <th>Time</th>
+            </thead>
+            <tbody>
+              <tr v-for="tweet in tweets" :key="tweet.id">
+                <td>${tweet.message}</td>
+                <td>${tweet.name}</td>
+                <td>${new Date(tweet.created_at).toLocaleString()}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+    </div>
+
+  </div>
+
+  <script src="{% static 'twitter/js/script.js' %}" type="module"></script>
+
+</body>
+
+</html>
